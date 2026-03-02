@@ -1277,13 +1277,9 @@
 
   <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
   <script>
-    function getServerUrl() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const serverParam = urlParams.get('server');
-      if (serverParam) return serverParam;
-      if (window.CHAT_SERVER_URL) return window.CHAT_SERVER_URL;
-      return window.location.origin;
-    }
+　function getServerUrl() {
+  return 'https://choco-chat.yosshy.f5.si/';
+}
 
     const socket = io(getServerUrl(), {
       transports: ['websocket', 'polling'],
