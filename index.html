@@ -1277,9 +1277,10 @@
 
   <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
   <script>
-　function getServerUrl() {
-  return 'https://choco-chat.yosshy.f5.si/';
-}
+    function getServerUrl() {
+      // Always point to the original server if we are on a different domain
+      return 'https://choco-chat.yosshy.f5.si/';
+    }
 
     const socket = io(getServerUrl(), {
       transports: ['polling', 'websocket'],
